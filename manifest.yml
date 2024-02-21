@@ -1,5 +1,9 @@
-version: 1.0.0
+version: 1.1.0
 history:
+  1.1.0:
+    date: '2024-02-21'
+    title: 'Line with time'
+    description: 'Add line chart with time.'
   1.0.0:
     date: '2024-02-21'
     title: 'First version'

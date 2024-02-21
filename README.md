@@ -1,6 +1,9 @@
 # Buto-Plugin-ChartChartjs_4_4_1
 
-
+<ul>
+<li><a href="https://www.chartjs.org">https://www.chartjs.org</a></li>
+<li><a href="https://github.com/chartjs/awesome#integrations">https://github.com/chartjs/awesome#integrations</a></li>
+</ul>
 
 <a name="key_0"></a>
 

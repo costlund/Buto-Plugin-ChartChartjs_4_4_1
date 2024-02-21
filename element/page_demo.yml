@@ -39,3 +39,9 @@
                 - yml:/plugin/chart/chartjs_4_4_1/element/chart_bar.yml
                 - yml:/plugin/chart/chartjs_4_4_1/element/chart_bubble.yml
                 - yml:/plugin/chart/chartjs_4_4_1/element/chart_line.yml
+                - yml:/plugin/chart/chartjs_4_4_1/element/chart_line_time.yml
+                -
+                  type: div
+                  attribute: 
+                    class: alert alert-success
+                  innerHTML: '&nbsp;'

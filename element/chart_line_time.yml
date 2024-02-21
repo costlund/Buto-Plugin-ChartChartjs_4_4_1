@@ -1,0 +1,32 @@
+type: widget
+data:
+  plugin: chart/chartjs_4_4_1
+  method: chart
+  data:
+    data:
+      id: my_chart_line_time
+    config:
+      type: line
+      data:
+        datasets:
+          -
+            label: 'Line time'
+            data:
+              - 
+                "x": '2021-11-01 00:00:00'
+                "y": 50
+              - 
+                "x": '2021-11-03'
+                "y": 60
+              - 
+                "x": '2021-11-07 09:00:00'
+                "y": 20
+      options:
+        scales:
+          x:
+            min: '2021-10-28 00:00:00'
+            max: '2021-11-10 00:00:00'
+            type: 'time'
+          "y":
+            max: 100
+            min: 0

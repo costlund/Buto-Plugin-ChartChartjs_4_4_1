@@ -1,5 +1,8 @@
 readme:
   name: Buto-Plugin-ChartChartjs_4_4_1
+  description: |
+    - https://www.chartjs.org
+    - https://github.com/chartjs/awesome#integrations
   item:
     -
       name: Settings
