@@ -8,6 +8,25 @@ readme:
       name: Settings
     -
       name: Usage
+      item:
+        -
+          name: Push
+          description: |
+            ````
+            var graph = Chart.getChart('my_chart_id')
+            graph.data.labels.push('New data')
+            graph.data.datasets[0].data.push(10);      
+            graph.update();
+            ````
+        -
+          name: Update
+          description: |
+            ````
+            var graph = Chart.getChart('my_chart_id')
+            graph.data.datasets[0].data[0] = graph.data.datasets[0].data[0]+100;
+            graph.data.labels[0] = 'Update ('+graph.data.datasets[0].data[0]+')';
+            graph.update();
+            ````
     -
       name: Pages
       item:

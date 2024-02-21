@@ -1,5 +1,9 @@
-version: 1.1.0
+version: 1.1.1
 history:
+  1.1.1:
+    date: '2024-02-21'
+    title: 'Readme'
+    description: 'Add Push and Update javascript.'
   1.1.0:
     date: '2024-02-21'
     title: 'Line with time'

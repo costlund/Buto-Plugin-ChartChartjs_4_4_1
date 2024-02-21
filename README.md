@@ -17,6 +17,24 @@
 
 
 
+<a name="key_1_0"></a>
+
+### Push
+
+<pre><code>var graph = Chart.getChart('my_chart_id')
+graph.data.labels.push('New data')
+graph.data.datasets[0].data.push(10);      
+graph.update();</code></pre>
+
+<a name="key_1_1"></a>
+
+### Update
+
+<pre><code>var graph = Chart.getChart('my_chart_id')
+graph.data.datasets[0].data[0] = graph.data.datasets[0].data[0]+100;
+graph.data.labels[0] = 'Update ('+graph.data.datasets[0].data[0]+')';
+graph.update();</code></pre>
+
 <a name="key_2"></a>
 
 ## Pages
