@@ -1,0 +1,25 @@
+type: widget
+data:
+  plugin: chart/chartjs_4_4_1
+  method: chart
+  data:
+    data:
+      id: my_chart_bubble
+    config:
+      type: 'bubble'
+      data:
+        datasets: 
+          -
+            label: 'Bubble'
+            data: 
+              -
+                x: 20
+                y: 30
+                r: 15
+              -
+                x: 40
+                y: 10
+                r: 10
+            backgroundColor: 'rgb(255, 99, 132)'
+      options:
+        _fake: 123

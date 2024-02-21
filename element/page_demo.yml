@@ -1,0 +1,41 @@
+-
+  type: text
+  text: '<!DOCTYPE html>'
+-
+  type: html
+  innerHTML:
+    -
+      type: head
+      innerHTML:
+        -
+          type: title
+          innerHTML: Chart demo
+        -
+          type: widget
+          data:
+            plugin: 'theme/include'
+            method: include
+            data:
+              bootswatch:
+                theme: Journal
+        -
+          type: widget
+          data:
+            plugin: chart/chartjs_4_4_1
+            method: include
+    -
+      type: body
+      innerHTML:
+        -
+          type: div
+          attribute: 
+            class: row
+          innerHTML: 
+            -
+              type: div
+              attribute: 
+                class: col-md-12
+              innerHTML: 
+                - yml:/plugin/chart/chartjs_4_4_1/element/chart_bar.yml
+                - yml:/plugin/chart/chartjs_4_4_1/element/chart_bubble.yml
+                - yml:/plugin/chart/chartjs_4_4_1/element/chart_line.yml

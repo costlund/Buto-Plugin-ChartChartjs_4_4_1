@@ -1,0 +1,12 @@
+-
+  type: div
+  attribute:
+    style: container:style
+  innerHTML:
+    -
+      type: canvas
+      attribute:
+        id: canvas:id
+-
+  type: script
+  innerHTML: script:chart
