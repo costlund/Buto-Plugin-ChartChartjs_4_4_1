@@ -74,7 +74,6 @@ readme:
                         type: 'time'
                         time:
                           unit: day
-                      "y": {}
             ````
         -
           name: widget_include
