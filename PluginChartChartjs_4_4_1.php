@@ -21,12 +21,16 @@ class PluginChartChartjs_4_4_1{
      * 
      */
     $id = $data->get('data/data/id');
+    $height = $data->get('data/data/height');
+    if(!$height){
+      $height = 400;
+    }
     /**
      * element
      */
     $element = wfDocument::getElementFromFolder(__DIR__, __FUNCTION__);
     $element->setByTag($data->get('data/data'), 'canvas');
-    $element->setByTag(array('style' => array('height' => '300px')), 'container');
+    $element->setByTag(array('style' => array('height' => $height."px")), 'container');
     $element->setByTag(array('chart' => "const ctx_$id = document.getElementById('$id');  new Chart(ctx_$id, $config)"), 'script');
     wfDocument::renderElement($element);
   }

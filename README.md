@@ -70,6 +70,31 @@ data:
   method: chart
   data:</code></pre>
 <p>Se example files /element/chart_*.</p>
+<pre><code>    data:
+      id: my_chart_id
+      height: 300 (optional, default 400)
+    config:
+      type: bar
+      data:
+        datasets:
+          -
+            label: 'My lable'
+            data:
+              - 
+                "x": '2021-11-01 00:00:00'
+                "y": 50
+              - 
+                "x": '2021-11-03'
+                "y": 60
+      options:
+        responsive: true
+        maintainAspectRatio: false
+        scales:
+          x:
+            type: 'time'
+            time:
+              unit: day
+          "y": {}</code></pre>
 
 <a name="key_3_1"></a>
 
