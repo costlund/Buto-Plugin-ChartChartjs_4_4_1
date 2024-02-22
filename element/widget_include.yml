@@ -6,6 +6,6 @@
     data:
       type: script
       file: 
-        - /plugin/chart/chartjs_4_4_1/js/PluginChartChartjs_4_4_1.js
+        - /plugin/chart/chartjs_4_4_1/js/chart.js
         - /plugin/chart/chartjs_4_4_1/js/date_fns.js
         - /plugin/chart/chartjs_4_4_1/js/chartjs-adapter-date-fns.bundle.min.js

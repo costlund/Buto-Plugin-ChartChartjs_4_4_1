@@ -1,0 +1,39 @@
+type: widget
+data:
+  plugin: chart/chartjs_4_4_1
+  method: chart
+  data:
+    data:
+      id: my_chart_bar_interval_time
+    config:
+      type: 'bar'
+      data:
+        labels:
+          - Hour
+          - Minute
+          - Secound
+        datasets:
+          -
+            label: 'Bar interval time'
+            data: 
+              - 0
+              - 0
+              - 0
+            backgroundColor:
+              - 'rgba(255, 99, 132, 0.2)'
+              - 'rgba(255, 159, 64, 0.2)'
+              - 'rgba(255, 205, 86, 0.2)'
+            borderColor:
+              - 'rgb(255, 99, 132)'
+              - 'rgb(255, 159, 64)'
+              - 'rgb(255, 205, 86)'
+            borderWidth: 1
+      options:
+        _fake: 123
+        indexAxis: 'y'
+        scales:
+          x:
+            min: 0
+            max: 59
+          y:
+            beginAtZero: true

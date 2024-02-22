@@ -9,7 +9,7 @@
       innerHTML:
         -
           type: title
-          innerHTML: Chart demo
+          innerHTML: Chart bar interval
         -
           type: widget
           data:
@@ -36,7 +36,15 @@
               attribute: 
                 class: col-md-12 mb-5
               innerHTML: 
-                - yml:/plugin/chart/chartjs_4_4_1/element/chart_bar.yml
-                - yml:/plugin/chart/chartjs_4_4_1/element/chart_bubble.yml
-                - yml:/plugin/chart/chartjs_4_4_1/element/chart_line.yml
-                - yml:/plugin/chart/chartjs_4_4_1/element/chart_line_time.yml
+                - yml:/plugin/chart/chartjs_4_4_1/element/chart_bar_interval_time.yml
+            -
+              type: script
+              innerHTML: |
+                setInterval(function () {
+                  const d = new Date();
+                  var graph = Chart.getChart('my_chart_bar_interval_time')
+                  graph.data.datasets[0].data[0] = d.getHours();
+                  graph.data.datasets[0].data[1] = d.getMinutes();
+                  graph.data.datasets[0].data[2] = d.getSeconds();
+                  graph.update();
+                }, 1000);

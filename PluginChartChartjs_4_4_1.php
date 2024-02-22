@@ -27,10 +27,21 @@ class PluginChartChartjs_4_4_1{
     $element = wfDocument::getElementFromFolder(__DIR__, __FUNCTION__);
     $element->setByTag($data->get('data/data'), 'canvas');
     $element->setByTag(array('style' => array('height' => '300px')), 'container');
-    $element->setByTag(array('chart' => "console.log($config);  const ctx_$id = document.getElementById('$id');  new Chart(ctx_$id, $config)"), 'script');
+    $element->setByTag(array('chart' => "const ctx_$id = document.getElementById('$id');  new Chart(ctx_$id, $config)"), 'script');
     wfDocument::renderElement($element);
   }
   public function page_demo(){
+    /**
+     * 
+     */
+    wfPlugin::enable('chart/chartjs_4_4_1');
+    /**
+     * 
+     */
+    $element = wfDocument::getElementFromFolder(__DIR__, __FUNCTION__);
+    wfDocument::renderElement($element);
+  }
+  public function page_chart_bar_interval(){
     /**
      * 
      */
