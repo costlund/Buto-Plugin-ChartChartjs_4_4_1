@@ -32,13 +32,34 @@ readme:
       item:
         -
           name: page_demo
+        -
+          name: page_chart_bar_interval
     -
       name: Widgets
       item:
         -
           name: widget_chart
+          description: |
+            Display a chart.
+            ````
+            type: widget
+            data:
+              plugin: chart/chartjs_4_4_1
+              method: chart
+              data:
+            ````
+            Se example files /element/chart_*.
         -
           name: widget_include
+          description: |
+            Include in html head section.
+            ````
+            type: widget
+            data:
+              plugin: chart/chartjs_4_4_1
+              method: include
+            ````
+
     -
       name: Event
       item: {  }
