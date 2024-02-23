@@ -38,12 +38,6 @@
               innerHTML: 
                 - yml:/plugin/chart/chartjs_4_4_1/element/chart_bar_ajax.yml
             -
-              type: a
-              attribute: 
-                class: btn btn-primary
-                onclick: get_data()
-              innerHTML: get_data
-            -
               type: script
               innerHTML: |
                 setInterval(function () {
