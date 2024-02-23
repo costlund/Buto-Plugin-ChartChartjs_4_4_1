@@ -35,6 +35,18 @@ graph.data.datasets[0].data[0] = graph.data.datasets[0].data[0]+100;
 graph.data.labels[0] = 'Update ('+graph.data.datasets[0].data[0]+')';
 graph.update();</code></pre>
 
+<a name="key_1_2"></a>
+
+### Ajax
+
+<pre><code>setInterval(function () {
+  $.getJSON( "/?webmaster_plugin=chart/chartjs_4_4_1&amp;page=chart_bar_ajax_data", function( json ) {
+    var graph = Chart.getChart('my_chart_bar_ajax')
+    graph.data = json.data;
+    graph.update();
+  });
+}, 10000);</code></pre>
+
 <a name="key_2"></a>
 
 ## Pages
@@ -45,13 +57,25 @@ graph.update();</code></pre>
 
 ### page_demo
 
-
+<p>Multiple examples.</p>
 
 <a name="key_2_1"></a>
 
 ### page_chart_bar_interval
 
+<p>Example interval update every secound.</p>
 
+<a name="key_2_2"></a>
+
+### page_chart_bar_ajax
+
+<p>Example how to update with ajax request.</p>
+
+<a name="key_2_3"></a>
+
+### page_chart_bar_ajax_data
+
+<p>Example how to set json data.</p>
 
 <a name="key_3"></a>
 
@@ -93,8 +117,7 @@ data:
           x:
             type: 'time'
             time:
-              unit: day
-          "y": {}</code></pre>
+              unit: day</code></pre>
 
 <a name="key_3_1"></a>
 

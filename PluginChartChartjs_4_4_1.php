@@ -35,25 +35,25 @@ class PluginChartChartjs_4_4_1{
     wfDocument::renderElement($element);
   }
   public function page_demo(){
-    /**
-     * 
-     */
     wfPlugin::enable('chart/chartjs_4_4_1');
-    /**
-     * 
-     */
     $element = wfDocument::getElementFromFolder(__DIR__, __FUNCTION__);
     wfDocument::renderElement($element);
   }
   public function page_chart_bar_interval(){
-    /**
-     * 
-     */
     wfPlugin::enable('chart/chartjs_4_4_1');
-    /**
-     * 
-     */
     $element = wfDocument::getElementFromFolder(__DIR__, __FUNCTION__);
     wfDocument::renderElement($element);
+  }
+  public function page_chart_bar_ajax(){
+    wfPlugin::enable('chart/chartjs_4_4_1');
+    $element = wfDocument::getElementFromFolder(__DIR__, __FUNCTION__);
+    wfDocument::renderElement($element);
+  }
+  public function page_chart_bar_ajax_data(){
+    $chart = new PluginWfYml(__DIR__.'/element/chart_bar_ajax.yml');
+    $chart->set('data/data/config/data/datasets/0/data/0', (int)date('H'));
+    $chart->set('data/data/config/data/datasets/0/data/1', (int)date('i'));
+    $chart->set('data/data/config/data/datasets/0/data/2', (int)date('s'));
+    exit(json_encode($chart->get('data/data/config')));
   }
 }

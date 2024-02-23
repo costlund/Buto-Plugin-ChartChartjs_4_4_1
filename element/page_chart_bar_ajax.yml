@@ -1,0 +1,55 @@
+-
+  type: text
+  text: '<!DOCTYPE html>'
+-
+  type: html
+  innerHTML:
+    -
+      type: head
+      innerHTML:
+        -
+          type: title
+          innerHTML: Chart bar interval
+        -
+          type: widget
+          data:
+            plugin: 'theme/include'
+            method: include
+            data:
+              bootswatch:
+                theme: Journal
+        -
+          type: widget
+          data:
+            plugin: chart/chartjs_4_4_1
+            method: include
+    -
+      type: body
+      innerHTML:
+        -
+          type: div
+          attribute: 
+            class: row
+          innerHTML: 
+            -
+              type: div
+              attribute: 
+                class: col-md-12 mb-5
+              innerHTML: 
+                - yml:/plugin/chart/chartjs_4_4_1/element/chart_bar_ajax.yml
+            -
+              type: a
+              attribute: 
+                class: btn btn-primary
+                onclick: get_data()
+              innerHTML: get_data
+            -
+              type: script
+              innerHTML: |
+                setInterval(function () {
+                  $.getJSON( "/?webmaster_plugin=chart/chartjs_4_4_1&page=chart_bar_ajax_data", function( json ) {
+                    var graph = Chart.getChart('my_chart_bar_ajax')
+                    graph.data = json.data;
+                    graph.update();
+                  });
+                }, 10000);

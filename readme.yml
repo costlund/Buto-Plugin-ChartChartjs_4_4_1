@@ -27,13 +27,33 @@ readme:
             graph.data.labels[0] = 'Update ('+graph.data.datasets[0].data[0]+')';
             graph.update();
             ````
+        -
+          name: Ajax
+          description: |
+            ````
+            setInterval(function () {
+              $.getJSON( "/?webmaster_plugin=chart/chartjs_4_4_1&page=chart_bar_ajax_data", function( json ) {
+                var graph = Chart.getChart('my_chart_bar_ajax')
+                graph.data = json.data;
+                graph.update();
+              });
+            }, 10000);
+            ````
     -
       name: Pages
       item:
         -
           name: page_demo
+          description: Multiple examples.
         -
           name: page_chart_bar_interval
+          description: Example interval update every secound.
+        -
+          name: page_chart_bar_ajax
+          description: Example how to update with ajax request.
+        -
+          name: page_chart_bar_ajax_data
+          description: Example how to set json data.
     -
       name: Widgets
       item:
